@@ -29,3 +29,46 @@ The **AI-Powered Meme Generator** is a machine learning-based system that automa
 ```bash
 git clone https://github.com/your-username/ai-meme-generator.git
 cd ai-meme-generator
+### 2. Install Dependencies  
+```sh
+pip install -r requirements.txt
+```
+
+### 3. Download Dataset  
+Place the Memes900k dataset in the correct directory as mentioned above.
+
+### 4. Run the Meme Generator  
+```sh
+streamlit run app.py
+```
+📂 ai-meme-generator  
+ ├── 📂 data                 # Dataset of meme templates and captions  
+ ├── 📂 models               # Pretrained and fine-tuned AI models  
+ ├── 📂 static               # Static assets (images, fonts)  
+ ├── 📂 templates            # HTML templates (if using Flask)  
+ ├── app.py                  # Main application script  
+ ├── requirements.txt        # Dependencies  
+ ├── README.md               # Documentation  
+ 
+## How It Works  
+
+1. The user inputs a meme idea into the Streamlit UI.  
+2. The model processes the text and predicts a funny caption.  
+3. A random meme template is selected from the dataset.  
+4. The caption is overlaid on the image using PIL (Pillow).  
+5. The final meme is displayed and saved as `generated_meme.jpg`.
+
+## Dependencies  
+
+Ensure you have the following libraries installed:
+- tensorflow
+- numpy
+- streamlit
+- pillow
+- random
+- os
+
+Install them via:  
+```sh
+pip install tensorflow numpy streamlit pillow
+```
